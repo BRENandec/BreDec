@@ -1,0 +1,539 @@
+var redH = 0;
+var greenH = 255;
+ var blueH = 0;
+ var healthBarX = 250;
+ var laserdelay = 300;
+
+
+var delayOfSacer = 300;
+var test = 0;    
+var xStartScreenSpace2 = 0;     //starting Screen once you get hit by astroid
+var xStartScreenSpace = 0;      //starting screen when game starts
+var xBeggingScreen2 = 0;
+var xStartingScreen = 0;
+var xBegginingScreen3 = 0;
+var xBeggingSceen1 = -0;
+var xBeggingSceen = -0;
+var xBeggingSceen4 = 0;
+var y;  //with of rainbow
+y = 44; //with of rainbow
+var x = 7;
+var yflyingDog = -60; //y corridinate for dog
+var xFlyingDog = 48;    //x corridinate for dog
+var xStar = 140;  //The X corridinate for astroids and stars and astroids in starting scene
+var xStar2 = 0; //the x corridinate for astroids and stars not on starting screen
+var yStar =random( -100, -40);
+var yStar2 =random (-104, -10) ;
+var superStarX = 0;
+var superStarY = 0;
+var xStar3 = -87;  //The X corridinate for astroids and stars and astroids in starting scene
+var xStar4 = 0;  //The X corridinate for astroids and stars and astroids in starting scene
+var xStar5 = 0;  //The X corridinate for astroids and stars and astroids in starting scene
+var xStar6 = 0;  //The X corridinate for astroids and stars and astroids in starting scene
+var xStar7 = 0;  //The X corridinate for astroids and stars and astroids in starting scene
+var yStar3 =random( -50,50);
+var yStar4 = random(-110, -40); 
+var yStar5 = random(-100,-59);
+var yStar6 = random(-40,90);
+var yStar7 = random(-100, 20);
+var sacerX = 73;
+var sacerY = -68;
+var laserX = 158;
+var laserY = - 13;
+var laserX2 = 156;
+var laserY2 = - 59;
+var laserX3 = 156;
+var laserY3 = - 59;
+var laserX4 = 155;
+var laserY4 = - 59;
+draw= function() {
+    
+    background(153, 29, 153);
+    textSize(24);
+    fill(0,0,300); 
+    rect(xBeggingSceen+101, 113, 172, 60);
+    fill(255, 0, 0);
+    text("Click Mouse to ",  xBeggingSceen +110 ,137 );
+    text("START GAME!", xBeggingSceen + 110, 167);
+    
+    
+    //laser from sacer
+    stroke(255, 0, 0);
+    fill(255, 0, 0);
+    rect(laserX+181,laserY+261,30,8);
+    triangle(laserX+181,laserY+261,laserX+173,laserY+265,laserX+181,laserY+269);
+    stroke(0,0,0);
+
+    //sacer
+    fill(70,70,70);
+    stroke(0,255,0);
+    strokeWeight(5);
+    ellipse(sacerX+279,sacerY+326,80,30);   //sacer base
+    noStroke();
+    fill(0,0,0);
+    ellipse(sacerX+279,sacerY+313,30,30);//sacer head
+    fill(70,70,70);//sacer head
+    rect(sacerX+264,sacerY+318,30,10);
+    fill(0,0,0);
+    ellipse(sacerX+279,sacerY+318,29,7); //bottom of sacer
+    ellipse(sacerX+255,sacerY+323,5,6); //circle 1(left)
+    ellipse(sacerX+263,sacerY+326,5,6);     //2
+    ellipse(sacerX+274,sacerY+328,5,5); //3
+    ellipse(sacerX+284,sacerY+328,5,5); //4
+    ellipse(sacerX+295,sacerY+326,5,5); //5
+    ellipse(sacerX+303,sacerY+323,5,5); //6
+    strokeWeight(2);
+    stroke(300,300,300);
+    rotate(20);
+    ellipse(sacerX+340,sacerY+169,10,4);    //SHINE ON sacer head
+    rotate(340);
+    
+noStroke();
+ 
+mouseClicked = function() {
+    draw= function() {
+        
+      background(0,255,0);
+    //xBeggingSceen1
+    fill(300,300,300);
+    
+    fill(255, 0, 0);    //red
+    textSize(24);
+    text("You are a giant flying dog,",xBeggingSceen1+53,150);
+    text("and you have to stay alive by ",xBeggingSceen1+38,180);
+    text("eating stars",xBeggingSceen1+120,210);
+    textSize(32);
+    fill(0,0,300);
+    rect(xBeggingSceen1+28,236,354,40);
+    fill(255, 0, 0);
+    text("Click Mouse to move on",xBeggingSceen1+33,267);
+    
+    
+    
+mouseClicked = function() {
+    draw= function() {
+        
+   
+   
+     background(0,255,0);
+    //xBeggingScreen2
+    fill(300,300,300);
+    
+    fill(255, 0, 0);
+    textSize(24);
+    text("When it comes to traveling in space",xBeggingScreen2+20,140);
+    text("there are lots of dangers such as",xBeggingScreen2+30,170);
+    textSize(34);
+    text("ASTROIDS",xBeggingScreen2+120,210);
+    textSize(24);
+    text("even though astroids will not kill", xBeggingScreen2+25,240 );
+    text("such a big creature, they will knock", xBeggingScreen2+20,270);
+    text("you out and you will restart the level",xBeggingScreen2+10,300);
+    fill(0,0,300);
+    rect(xBeggingScreen2+82,330,254,40);
+    fill(255, 0, 0);
+    textSize(34);
+    text("Click to move on",xBeggingScreen2 + 85, 358);
+    
+      
+      
+  
+         
+
+mouseClicked = function() {
+     draw = function() {
+           
+          background(0,255,0);
+          fill(255, 0, 0);
+         textSize(24);
+         text("In every Galaxy there must", xBegginingScreen3+50,50);
+         text("be one star greater than the others.", xBegginingScreen3+10,80);
+         text("These are called", xBegginingScreen3+102,120);
+         textSize(34);
+         text("SUPER STARS", xBegginingScreen3+80,160);
+         textSize(24);
+         text("These look like", xBegginingScreen3 + 110, 190);
+         
+         
+         fill(255,50,255);
+         ellipse(superStarX + 200, superStarY + 250, 110,75);   // outer layer of super star
+         fill(11, 161, 64);
+         ellipse(superStarX + 200, superStarY + 250, 85,60);    //layer 4 of super star
+         fill(186, 125, 20);
+         ellipse(superStarX+ 200, superStarY + 250, 60,45);     //LAYER 3 OF super star
+         fill(0,0,0);
+         ellipse(superStarX + 200, superStarY+ 250, 40, 30);    // layer 2 of super star
+         fill(255, 0, 0);
+         ellipse(superStarX + 200, superStarY + 250,15,15); //CENTER of super star
+         textSize(18);
+        text("these stars travel much faster than regular stars", xBegginingScreen3 + 10, 312);   //text under super star
+fill(0,0,255);
+rect(xBegginingScreen3+64,342,263,41);
+fill(255,0,0);
+textSize(34);
+text("click to move on",xBegginingScreen3+74,375);
+mouseClicked = function() { 
+    draw = function() {
+        
+    background(0,255,0);
+    
+    //starting screen
+    textSize(24);
+    fill(300,300,300);
+   
+    fill(255, 0, 0);
+    text("Collect points by catching stars,", xStartingScreen+29,130);
+    text("but watch out for astroids because ",xStartingScreen+13,160);
+    text("if they hit you they will ",xStartingScreen+71,190);
+    text("knock you out",xStartingScreen+128,220);
+    textSize(34);
+    fill(0, 0, 170);
+    rect(xStartingScreen+20,255,360,45);
+    fill(255, 0, 0);
+    text("Click mouse to START",xStartingScreen+25,290);
+    
+    
+    
+    
+    mouseClicked = function () {
+       draw = function() {
+           
+       
+    
+
+
+     
+     
+    //set up
+    background(25, 17, 71); //navy blue
+    
+    
+    
+    //rainbow
+    stroke(0, 0, 0);
+    
+    
+    
+    
+    fill(255,0 , 0);    //red for rainbw
+    rect(xFlyingDog-129,yflyingDog+306,y,x); //top right rainbow
+    
+    fill(255, 132, 0);  //orange of rainbow
+    rect(xFlyingDog-135,yflyingDog+320,y,x); //Second down of rainbow
+    
+    fill(255, 213, 0);  //yellow of rainbow
+    rect(xFlyingDog-132,yflyingDog+313,y,x); //third down block of rainbow
+    
+    fill(30, 250, 10);  //green of rainbow
+    rect(xFlyingDog-132,yflyingDog+327,y,x); //forth block down
+    
+    fill(9, 0, 255);    //blue of rainbow
+    rect(xFlyingDog-130,yflyingDog+334,y,x); //fith block down
+    
+    fill(210, 14, 240); //purple of rainbow 
+    rect(xFlyingDog-128,yflyingDog+341,y,x); //bottom of rainbow
+    
+    noStroke();
+    
+    //face of dog
+    fill(135, 93, 22);  //brown
+    triangle(xFlyingDog-23,yflyingDog+314,xFlyingDog-11,yflyingDog+344,xFlyingDog+50,yflyingDog+289);   //neck
+    
+    rect(xFlyingDog+20,yflyingDog+276,25,20);  //connects the upper and lower head   
+    
+    rect(xFlyingDog+15,yflyingDog+284,45,26,10);    // bottom of face
+    rect (xFlyingDog+15,yflyingDog+270,30,13,19);    //top of face
+    stroke(15, 13, 15); //Add lines around the ear
+    rect(xFlyingDog+15,yflyingDog+270,16,30,19); // ear
+    noStroke();         //take away the lines from the face and body
+    ellipse(xFlyingDog+55,yflyingDog+298,26,26); //mouth
+    
+    fill(0, 0, 0); //black 
+    
+    ellipse(xFlyingDog+69,yflyingDog+292, 8,8);  //nose
+    ellipse(xFlyingDog+38,yflyingDog+282,8,8);  //eye  
+     
+    
+    //mid body
+    fill(135, 93, 22);  //brown
+    rect(xFlyingDog-101,yflyingDog+306,106,37,50);   //back
+    ellipse(xFlyingDog-48,yflyingDog+330,106,60);    //belly
+    
+    
+        
+        
+    
+    
+    //wing
+    stroke(97, 61, 7);  //darker brown lines
+    fill(135, 93, 22);  //brown
+    
+    triangle(xFlyingDog-68,yflyingDog+314,xFlyingDog-14,yflyingDog+313,xFlyingDog+35,yflyingDog+390); //big wing
+    
+    triangle(xFlyingDog-68,yflyingDog+314,xFlyingDog-49,yflyingDog+328,xFlyingDog-82,yflyingDog+316);  //wing closest to body (1)
+    triangle(xFlyingDog-73,yflyingDog+328,xFlyingDog-33,yflyingDog+341,xFlyingDog-50,yflyingDog+328);  //wing 2
+    triangle(xFlyingDog-57,yflyingDog+348,xFlyingDog-29,yflyingDog+344,xFlyingDog-14,yflyingDog+355);  //wing 3
+    triangle(xFlyingDog-14,yflyingDog+355,xFlyingDog-37,yflyingDog+362,xFlyingDog+1,yflyingDog+366);    //wing 4
+    triangle(xFlyingDog+1,yflyingDog+366,xFlyingDog-20,yflyingDog+375,xFlyingDog+20,yflyingDog+379);     //wing 5
+    triangle(xFlyingDog+20,yflyingDog+379,xFlyingDog-5,yflyingDog+389,xFlyingDog+35,yflyingDog+390);     //wing farthest from the body(5)
+    //block out extra and replace with the color of the sky
+    noStroke();
+    fill(25, 17, 71);   //navy blue
+    rect(xFlyingDog-101,yflyingDog+256,95,50);  //removes behind back
+    
+    
+    
+    //astriod 1, top, part 1
+    noStroke(); //Prevent all lines in astroid
+    fill(82, 24, 6);    //brownish reddish
+    ellipse(xStar+102,yStar+173,80,80); //base of astroid
+    fill(25, 17, 71);   //Navy Blue
+    rect(xStar+71,yStar+164,28,37);   //  Blocks out rect so bottom left of astroid is circlular
+    fill(82, 24, 6);    //Reddish brownish of astroid
+    rect(xStar+64,yStar+164,50,37,45);  // Connacts the top and bottom part of astroid
+    fill(25,17,71); //Navy blue
+    rect(xStar+74,yStar+113,25,30);   //blocks out the top right of the astroid
+    fill(82, 24, 6);    //Reddish Brownish
+    ellipse(xStar+102,yStar+143,20,20);   // Top left edge of astroid
+    ellipse(xStar+130,yStar+191,30,32);   // Middle left mound on astroid
+    
+    //craters in astroid 1
+    stroke(82, 35, 6);  //Outline of craters
+    strokeWeight(2);    //Thickness of the outline of the craters
+    fill(85, 30, 0);    //Reddish brownish (not the same as the standard astroid color)
+    ellipse(xStar+110,yStar+170,10,20);   //Upper crater in astroid one
+    rect(xStar+90,yStar+190,15,15,15);    //lower crater in astroid one
+    
+    //astriod 2, left
+    ellipse(xStar3+118,yStar3+359,30,30); //left brownish reddish circle
+    
+    noStroke(); //no lines in the sky
+    fill(25, 17, 71);   //navy blue
+    rect(xStar+51,yStar+107,40,59,45);  //removes top left of the astroid base
+    rect(xStar+40,yStar+202,36,7);  //removes bottom right of astoid part sticking out to the lower left
+    ellipse(xStar+75,yStar+207,10,10);   //removes bottom right of astoid part sticking out to the lower left
+    
+    
+    //Astroid part 2
+    fill(82, 24, 6);    //reddish brown
+    ellipse(xStar+92,yStar+168,30,30);  //top right circle 
+    
+    
+    //stars
+    fill(300,300,300);  //white
+    //star 1
+    ellipse(xStar4+0,yStar4+454,15,15);   //circle of bottom right star
+    triangle(xStar4-22,yStar4+454,xStar4+0,yStar4+447,xStar4,yStar4+460);  //left bottom of star shine (star shine 1
+    triangle(xStar4,yStar4+432,xStar4-7,yStar4+454,xStar4+7,yStar4+454);   //left top of star shine (star shine 2
+    triangle(xStar4+22,yStar4+453,xStar4,yStar4+446,xStar4,yStar4+461);   //right top of star shine (star shine 3
+    triangle(xStar4,yStar4+476,xStar4-7,yStar4+454,xStar4+7,yStar4+454);   //right bottom of star shine (star shine 4
+    //star 2
+    ellipse(xStar5+120,yStar5+270,15,15); //top left star
+    triangle(xStar5+98,yStar5+270,xStar5+120,yStar5+263,xStar5+120,yStar5+277);   //star shine 1
+    triangle(xStar5+120,yStar5+248,xStar5+127,yStar5+270,xStar5+113,yStar5+270);  //star shine 2
+    triangle(xStar5+142,yStar5+270,xStar5+120,yStar5+263,xStar5+120,yStar5+277);  //star shine 3
+    triangle(xStar5+120,yStar5+292,xStar5+113,yStar5+270,xStar5+127,yStar5+270);  //star shine 4
+    //star 3
+    ellipse(xStar-1706,yStar6+270,15,15);    //bottom left star
+    triangle(xStar6-192,yStar6+270,xStar6-170,yStar6+263,xStar6-170,yStar6+277);   //Star Shine 1
+    triangle(xStar6-170,yStar6+248,xStar6-163,yStar6+270,xStar6-177,yStar6+270);   //star shine 2
+    triangle(xStar6-148,yStar6+270,xStar6-170,yStar6+263,xStar6-170,yStar6+277);   //star shine 3
+    triangle(xStar6-170,yStar6+292,xStar6-163,yStar6+270,xStar6-177,yStar6+270);   //star shine 4
+    
+    
+    //star/astroid set 2
+    ellipse(xStar2+500,yStar2+200,15,15);     //star middle star
+    triangle(xStar2+478,yStar2+200,xStar2+500,yStar2+207,xStar2+500,yStar2+193);  //Star shine 1
+    triangle(xStar2+500,yStar2+222,xStar2+493,yStar2+200,xStar2+507,yStar2+200);  //star shine 2
+    triangle(xStar2+522,yStar2+200,xStar2+500,yStar2+207,xStar2+500,yStar2+193);  //star shine 3
+    triangle(xStar2+500,yStar2+178,xStar2+507,yStar2+200,xStar2+493,yStar2+200);  //star shine 3
+    yflyingDog=yflyingDog;
+    
+    //star top
+    ellipse(xStar7+450,yStar7+50,15,15); //star base
+    triangle(xStar7+428,yStar7+50,xStar7+450,yStar7+57,xStar7+450,yStar7+43);    //star  shine 1
+    triangle(xStar7+450,yStar7+72,xStar7+457,yStar7+50,xStar7+443,yStar7+50);   //ss2
+    
+    triangle(xStar7 + 472, yStar7 + 50, xStar7+450,yStar7+57,xStar7+450,yStar7+ 43); //ss3
+    
+    triangle(xStar7+450,yStar7+28,xStar7+457,yStar7+50,xStar7+443,yStar7+50);   //ss4
+
+      var health = (healthBarX - 50)/2;
+
+
+//health bar
+    stroke(300,300,300);
+    strokeWeight(5);
+    fill(redH, greenH, blueH);
+    rect(100,350,200,20);
+    fill(25, 17, 71);
+    rect(healthBarX,350,200,20);
+    noStroke();
+    rect(healthBarX+ 3,345,210,30);
+    fill(redH,greenH,blueH);
+    textSize(12);
+    text("health: " + health, healthBarX + 10, 365); 
+    
+ //Sacer
+    //laser from sacer
+    stroke(255, 0, 0);
+    fill(255, 0, 0);
+    rect(laserX+181,laserY+323,30,8);
+    triangle(laserX+181,laserY+323,laserX+173,laserY+327,laserX+181,laserY+331);
+    stroke(0,0,0);
+    
+    stroke(255, 0, 0);
+    fill(255, 0, 0);
+    rect(laserX2+181,laserY2+323,30,8);
+    triangle(laserX2+181,laserY2+323,laserX2+173,laserY2+327,laserX2+181,laserY2+331);
+    stroke(0,0,0);
+    
+    stroke(255, 0, 0);
+    fill(255, 0, 0);
+    rect(laserX3+181,laserY3+323,30,8);
+    triangle(laserX3+181,laserY3+323,laserX3+173,laserY3+327,laserX3+181,laserY3+331);
+    stroke(0,0,0);
+    
+    stroke(255, 0, 0);
+    fill(255, 0, 0);
+    rect(laserX4+181,laserY4+323,30,8);
+    triangle(laserX4+181,laserY4+323,laserX4+173,laserY4+327,laserX4+181,laserY4+331);
+    stroke(0,0,0);
+
+    //sacer
+    fill(70,70,70);
+    stroke(0,255,0);
+    strokeWeight(5);
+    ellipse(sacerX+279,sacerY+326,80,30);   //sacer base
+    noStroke();
+    fill(0,0,0);
+    ellipse(sacerX+279,sacerY+313,30,30);//sacer head
+    fill(70,70,70);//sacer head
+    rect(sacerX+264,sacerY+318,30,10);
+    fill(0,0,0);
+    ellipse(sacerX+279,sacerY+318,29,7); //bottom of sacer
+    ellipse(sacerX+255,sacerY+323,5,6); //circle 1(left)
+    ellipse(sacerX+263,sacerY+326,5,6);     //2
+    ellipse(sacerX+274,sacerY+328,5,5); //3
+    ellipse(sacerX+284,sacerY+328,5,5); //4
+    ellipse(sacerX+295,sacerY+326,5,5); //5
+    ellipse(sacerX+303,sacerY+323,5,5); //6
+    strokeWeight(2);
+    stroke(300,300,300);
+    
+    ellipse(sacerX+284,sacerY+305,8,5);    //SHINE ON sacer head
+    
+    
+    
+noStroke();
+   
+    if(xStartScreenSpace === -400){yflyingDog = -90;}
+    if(keyIsPressed&&keyCode===0){xStartScreenSpace-=400;}  //xStartScreenSpace moves left
+    if (keyIsPressed&&keyCode===DOWN){yflyingDog+=7;}  //how dog moves up
+    if (keyIsPressed&&keyCode===UP){yflyingDog-=7;}   //how dog moves down
+    
+    xStar-=7;   //set of sars one moves across screen
+    xStar2-=14;  //set of staars two move across screen
+    if(xStar<-500){xStar = 800;}
+    if(xStar2<-1000){xStar2=300;}
+    if(yflyingDog+265>400){yflyingDog =-390;}
+    if(yflyingDog < -390){yflyingDog = 135;}
+    xStar3-=7;
+    xStar4-=9;
+    xStar5-=6;
+    xStar6-=10;
+    xStar7-=5;
+    if(xStar2===1000){yStar2 = random(-104, -10);}
+   if(xStar3  < -500){xStar3 = 800;}
+    if(xStar4  < -500){xStar4 = 800;}
+     if(xStar5  < -500){xStar5 = 800;}
+      if(xStar6  < -500){xStar6 = 800;}
+       if(xStar7  < -1000){xStar7 = 300;}
+    if(dist( xStar+102,yStar+173 , xFlyingDog+30,yflyingDog+276 ) < 30) {   xFlyingDog   = 1000;}
+     
+      if(dist( xStar+102,yStar+173 , xFlyingDog-45,yflyingDog+306 ) < 80 && healthBarX ===300) {  healthBarX = 275;}
+     if(dist( xStar2+500,yStar2+200 , xFlyingDog+30,yflyingDog+276) < 30) { yStar2     = 1000;}
+     
+     if(dist( xStar3+118,yStar3+394, xFlyingDog+30,yflyingDog+276) < 30) {xFlyingDog     = 1000;}
+     if(dist( xStar3+118,yStar3+394, xFlyingDog-56,yflyingDog+306) < 30) {xFlyingDog     = 1000;}
+     if(dist( xStar3+118,yStar3+394, xFlyingDog-45,yflyingDog+306) < 30) {xFlyingDog     = 1000;}
+     
+       if(dist( xStar4+0,yStar4+454 , xFlyingDog+30,yflyingDog+276 ) < 30) {   yStar4   = 1000;}
+        if(dist( xStar5+120,yStar5+270, xFlyingDog+30,yflyingDog+276 ) < 30) { yStar5     = 1000;}
+         if(dist( xStar6-176,yStar6+270, xFlyingDog+30,yflyingDog+276 ) < 30) {    yStar6  = 1000;}
+          if(dist(xStar7+450,yStar7+50, xFlyingDog+30,yflyingDog+276 ) < 30) {  yStar7    = 1000;}
+            if(dist(laserX+181,laserY+323,xFlyingDog+30,yflyingDog+276) < 30) {xFlyingDog=1000;}
+           
+      if(dist( xStar+102,yStar+173 , xFlyingDog-45,yflyingDog+306 ) < 83 && healthBarX ===300) {  healthBarX = 275;}
+      if(dist( xStar+102,yStar+173 , xFlyingDog-45,yflyingDog+306 ) < 76 && healthBarX ===275) {  healthBarX = 250;}
+      if(dist( xStar+102,yStar+173 , xFlyingDog-45,yflyingDog+306 ) < 71 && healthBarX ===250) {  healthBarX = 225;}
+          if(dist( xStar+102,yStar+173 , xFlyingDog-45,yflyingDog+306 ) < 73 && healthBarX ===225) {  healthBarX = 200;}
+           if(dist(laserX+181,laserY+323,xFlyingDog-45,yflyingDog+306 ) < 74 && healthBarX===300) {healthBarX = 275;}
+             if(dist(laserX2+181,laserY2+323,xFlyingDog-45,yflyingDog+306 ) < 74 && healthBarX===275) {healthBarX = 250;}
+               if(dist(laserX3+181,laserY3+323,xFlyingDog-45,yflyingDog+306 ) < 74 && healthBarX===250) {healthBarX = 225;}
+            if(dist(laserX4+181,laserY4+323,xFlyingDog-45,yflyingDog+306 ) < 74 && healthBarX===225) {healthBarX = 200;}
+          
+       //laser and sacer ifs   
+    if(laserX===158){laserY=sacerY;}
+    if(keyIsPressed&&keyCode===UP){sacerY-=7;}   
+           if(keyIsPressed&&keyCode===DOWN){sacerY+=7;}   
+    laserX-=5;
+    if(laserX<-600){laserX = 158;}
+    rect(delayOfSacer,-300,1,1);
+    delayOfSacer -=1;
+    if(delayOfSacer===0){sacerY = yflyingDog;} 
+    if(sacerY>100){sacerY= -300;}
+    if(sacerY< -300){sacerY= 100;}
+    rect(laserdelay,450,50,50);
+    if(healthBarX===275){laserdelay -=5;}
+    if(laserdelay < 0) {laserdelay +=5 ;}
+       if(laserdelay < 0) {laserdelay = 0;}
+        if(healthBarX===250){laserdelay -=5;}
+    if(laserdelay < -300) {laserdelay +=5 ;}
+       if(laserdelay < -300) {laserdelay = -300;}
+        if(healthBarX===225){laserdelay -=5;}
+    if(laserdelay < -600) {laserdelay +=5 ;}
+       if(laserdelay < -900) {laserdelay = -600;}
+       
+       
+       
+    //star randomization
+    if(xStar===800){yStar=random(random(-128,258));}
+    if(xStar3===800){yStar3=random(-100,60);}
+    if(xStar4===800){yStar4=random(-122,-24);}
+    if(xStar5===800){yStar5=random(-270,70);}
+    fill(255, 0, 0);
+    rect(test,0,400,400);
+    test -= 40;
+    
+    
+    //health bar ifs
+    if(health===100){redH=0;}
+       if(health===100){greenH=255;}
+          if(health===100){blueH=0;}
+          
+    if(health===75){redH=210;}
+      if(health===75){greenH=210;}
+        if(health===75){blueH=40;}
+    if(health===50){redH=173;}
+         if(health===50){greenH=63;}
+          if(health===50){blueH=22;}
+       if(health===25){redH=255;}
+              if(health===25){greenH=0;}
+                     if(health===25){blueH=0;}
+
+
+      
+};
+};
+};
+};
+};
+};
+};
+};
+};
+};
+};
+ 
+ 
